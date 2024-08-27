@@ -42,15 +42,15 @@ export const WorkspaceInvitationsListItem: FC<Props> = observer((props) => {
       .then(() => {
         setToast({
           type: TOAST_TYPE.SUCCESS,
-          title: "Success!",
-          message: "Invitation removed successfully.",
+          title: "Успешно!",
+          message: "Приглашение удалено.",
         });
       })
       .catch((err) =>
         setToast({
           type: TOAST_TYPE.ERROR,
-          title: "Error!",
-          message: err?.error || "Something went wrong. Please try again.",
+          title: "Ошибка!",
+          message: err?.error || "Что-то пошло не так. Пожалуйста, попробуйте еще раз.",
         })
       );
   };
@@ -118,8 +118,8 @@ export const WorkspaceInvitationsListItem: FC<Props> = observer((props) => {
               }).catch(() => {
                 setToast({
                   type: TOAST_TYPE.ERROR,
-                  title: "Error!",
-                  message: "An error occurred while updating member role. Please try again.",
+                  title: "Ошибка!",
+                  message: "Произошла ошибка при обновлении роли участника. Попробуйте еще раз.",
                 });
               });
             }}
