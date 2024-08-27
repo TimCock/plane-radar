@@ -19,19 +19,16 @@ import { WorkspaceEditionBadge } from "@/plane-web/components/workspace";
 
 const HELP_OPTIONS = [
   {
-    name: "Documentation",
-    href: "https://docs.plane.so/",
-    Icon: FileText,
+    name: "",
+    href: "",
   },
   {
-    name: "Join our Discord",
-    href: "https://discord.com/invite/A92xrEGCge",
-    Icon: DiscordIcon,
+    name: "",
+    href: "",
   },
   {
-    name: "Report a bug",
-    href: "https://github.com/makeplane/plane/issues/new/choose",
-    Icon: GithubIcon,
+    name: "Сообщить о баге",
+    href: "",
   },
 ];
 
