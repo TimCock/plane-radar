@@ -108,7 +108,7 @@ export const AccountTypeColumn: React.FC<AccountTypeProps> = observer((props) =>
         <Controller
           name="role"
           control={control}
-          rules={{ required: "Role is required." }}
+          rules={{ required: "Роль обязательна." }}
           render={({ field: { value } }) => (
             <CustomSelect
               value={value}
@@ -125,8 +125,8 @@ export const AccountTypeColumn: React.FC<AccountTypeProps> = observer((props) =>
 
                   setToast({
                     type: TOAST_TYPE.ERROR,
-                    title: "Error!",
-                    message: errorString ?? "An error occurred while updating member role. Please try again.",
+                    title: "Ошибка!",
+                    message: errorString ?? "Произошла ошибка при обновлении роли участника. Повторите попытку.",
                   });
                 });
               }}
