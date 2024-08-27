@@ -142,14 +142,14 @@ export const SidebarProjectsListItem: React.FC<Props> = observer((props) => {
 
     const addToFavoritePromise = addProjectToFavorites(workspaceSlug.toString(), project.id);
     setPromiseToast(addToFavoritePromise, {
-      loading: "Adding project to favorites...",
+      loading: "Добавление проекта в избранное...",
       success: {
-        title: "Success!",
-        message: () => "Project added to favorites.",
+        title: "Успешно!",
+        message: () => "Проект добавлен в избранное.",
       },
       error: {
         title: "Error!",
-        message: () => "Couldn't add the project to favorites. Please try again.",
+        message: () => "Не удалось добавить проект в избранное. Попробуйте еще раз.",
       },
     });
   };
@@ -159,14 +159,14 @@ export const SidebarProjectsListItem: React.FC<Props> = observer((props) => {
 
     const removeFromFavoritePromise = removeProjectFromFavorites(workspaceSlug.toString(), project.id);
     setPromiseToast(removeFromFavoritePromise, {
-      loading: "Removing project from favorites...",
+      loading: "Удаление проекта из избранного...",
       success: {
-        title: "Success!",
-        message: () => "Project removed from favorites.",
+        title: "Успешно!",
+        message: () => "Проект удален из избранного.",
       },
       error: {
         title: "Error!",
-        message: () => "Couldn't remove the project from favorites. Please try again.",
+        message: () => "Не удалось удалить проект из избранного. Попробуйте еще раз.",
       },
     });
   };
