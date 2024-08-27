@@ -42,16 +42,16 @@ export const WorkspaceMembersListItem: FC<Props> = observer((props) => {
     await leaveWorkspace(workspaceSlug.toString())
       .then(() => {
         captureEvent(WORKSPACE_MEMBER_LEAVE, {
-          state: "SUCCESS",
-          element: "Workspace settings members page",
+          state: "Успешно",
+          element: "Настройки простраства страницы участников",
         });
         router.push("/profile");
       })
       .catch((err: any) =>
         setToast({
           type: TOAST_TYPE.ERROR,
-          title: "Error!",
-          message: err?.error || "Something went wrong. Please try again.",
+          title: "Ошибка!",
+          message: err?.error || "Что-то пошло не так. Попробуйте еще раз.",
         })
       );
   };
@@ -63,7 +63,7 @@ export const WorkspaceMembersListItem: FC<Props> = observer((props) => {
       setToast({
         type: TOAST_TYPE.ERROR,
         title: "Error!",
-        message: err?.error || "Something went wrong. Please try again.",
+        message: err?.error || "Что-то пошло не так. Попробуйте еще раз.",
       })
     );
   };
