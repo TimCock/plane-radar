@@ -22,13 +22,13 @@ import { WorkspaceLogo } from "../logo";
 const userLinks = (workspaceSlug: string) => [
   {
     key: "workspace_invites",
-    name: "Workspace invites",
+    name: "Приглашения в проекты",
     href: "/invitations",
     icon: Mails,
   },
   {
     key: "settings",
-    name: "Workspace settings",
+    name: "Настройки рабочей области",
     href: `/${workspaceSlug}/settings`,
     icon: Settings,
   },
