@@ -71,14 +71,14 @@ export const WorkspaceDetails: FC = observer(() => {
           eventName: WORKSPACE_UPDATED,
           payload: {
             ...res,
-            state: "SUCCESS",
-            element: "Workspace general settings page",
+            state: "УСПЕШНО",
+            element: "Общие настройки проекта",
           },
         });
         setToast({
-          title: "Success!",
+          title: "Успегно!",
           type: TOAST_TYPE.SUCCESS,
-          message: "Workspace updated successfully",
+          message: "Проект успешно обновлен",
         });
       })
       .catch((err) => {
@@ -86,7 +86,7 @@ export const WorkspaceDetails: FC = observer(() => {
           eventName: WORKSPACE_UPDATED,
           payload: {
             state: "FAILED",
-            element: "Workspace general settings page",
+            element: "Общие настройки проекта",
           },
         });
         console.error(err);
@@ -110,16 +110,16 @@ export const WorkspaceDetails: FC = observer(() => {
         .then(() => {
           setToast({
             type: TOAST_TYPE.SUCCESS,
-            title: "Success!",
-            message: "Workspace picture removed successfully.",
+            title: "Успешно!",
+            message: "Аватар проекта успешно обновлен.",
           });
           setIsImageUploadModalOpen(false);
         })
         .catch(() => {
           setToast({
             type: TOAST_TYPE.ERROR,
-            title: "Error!",
-            message: "There was some error in deleting your profile picture. Please try again.",
+            title: "Ошибка!",
+            message: "При удалении изображения профиля произошла ошибка. Пожалуйста, попробуйте еще раз.",
           });
         })
         .finally(() => setIsImageRemoving(false));
@@ -132,7 +132,7 @@ export const WorkspaceDetails: FC = observer(() => {
     copyUrlToClipboard(`${currentWorkspace.slug}`).then(() => {
       setToast({
         type: TOAST_TYPE.SUCCESS,
-        title: "Workspace URL copied to the clipboard.",
+        title: "URL-адрес проекта скопирован в буфер обмена.",
       });
     });
   };
@@ -220,10 +220,10 @@ export const WorkspaceDetails: FC = observer(() => {
                 control={control}
                 name="name"
                 rules={{
-                  required: "Name is required",
+                  required: "Требуется имя",
                   maxLength: {
                     value: 80,
-                    message: "Workspace name should not exceed 80 characters",
+                    message: "Имя проекта не должно превышать 80 символов",
                   },
                 }}
                 render={({ field: { value, onChange, ref } }) => (
@@ -296,7 +296,7 @@ export const WorkspaceDetails: FC = observer(() => {
           {isAdmin && (
             <div className="flex items-center justify-between py-2">
               <Button variant="primary" onClick={handleSubmit(onSubmit)} loading={isLoading}>
-                {isLoading ? "Updating..." : "Update Workspace"}
+                {isLoading ? "Обновление..." : "Обновить проект"}
               </Button>
             </div>
           )}
